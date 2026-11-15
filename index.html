@@ -211,7 +211,7 @@
       </div>
       <button class="btn btn-wa" type="submit"><svg><use href="#i-wa"/></svg>Enviar por WhatsApp</button>
       <p class="aviso" id="aviso" role="status">Elegí al menos una opción o escribinos qué necesitás.</p>
-      <p class="alt">¿Preferís mail? <button type="button" id="por-mail">Mandalo a hola@studiocomplex.com.ar</button></p>
+      <p class="alt">¿Preferís mail? <button type="button" id="por-mail">Mandalo a soporte@studiocomplex.com.ar</button></p>
     </form>
   </section>
 
@@ -242,7 +242,7 @@
     <div class="rotulo"><h2 id="t-links">Más</h2></div>
     <div class="links">
       <a class="link" href="https://studiocomplex.com.ar/?utm_source=instagram&amp;utm_medium=bio&amp;utm_campaign=links"><svg><use href="#i-web"/></svg><span>Nuestra web<small>studiocomplex.com.ar</small></span><span class="fl" aria-hidden="true">→</span></a>
-      <a class="link" href="mailto:hola@studiocomplex.com.ar?subject=Consulta%20desde%20Instagram"><svg><use href="#i-mail"/></svg><span>Mail<small>hola@studiocomplex.com.ar</small></span><span class="fl" aria-hidden="true">→</span></a>
+      <a class="link" href="mailto:soporte@studiocomplex.com.ar?subject=Consulta%20desde%20Instagram"><svg><use href="#i-mail"/></svg><span>Mail<small>soporte@studiocomplex.com.ar</small></span><span class="fl" aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -286,7 +286,7 @@
   });
   document.getElementById('por-mail').addEventListener('click', function () {
     var t = armar(); if (!t) return falta();
-    location.href = 'mailto:hola@studiocomplex.com.ar?subject=' + encodeURIComponent('Consulta desde Instagram') + '&body=' + encodeURIComponent(t);
+    location.href = 'mailto:soporte@studiocomplex.com.ar?subject=' + encodeURIComponent('Consulta desde Instagram') + '&body=' + encodeURIComponent(t);
   });
 
   // Botón flotante cuando los de arriba salen de pantalla
