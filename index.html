@@ -132,13 +132,6 @@
   footer .redes svg{ width:18px; height:18px; }
   footer a.m{ color:var(--suave); }
 
-  /* WhatsApp flotante: aparece al pasar los botones de arriba */
-  .flota{ position:fixed; right:16px; bottom:calc(16px + env(safe-area-inset-bottom)); z-index:5; display:flex; align-items:center; justify-content:center;
-          width:56px; height:56px; border-radius:50%; background:var(--wa); color:#06260f; box-shadow:0 10px 28px rgba(0,0,0,.45);
-          opacity:0; transform:translateY(12px); pointer-events:none; transition:opacity .25s, transform .25s; }
-  .flota.on{ opacity:1; transform:none; pointer-events:auto; }
-  .flota svg{ width:28px; height:28px; }
-
   @media (min-width:700px){
     .wrap{ padding-top:56px; }
     h1{ font-size:34px; }
@@ -260,8 +253,6 @@
   </footer>
 </main>
 
-<a class="flota js-wa" id="flota" data-msg="Hola Studio Complex, los vi en Instagram y quiero hacerles una consulta." href="https://wa.me/5491153362945" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg><use href="#i-wa"/></svg></a>
-
 <script>
 (function () {
   var NUM = '5491153362945';
@@ -270,11 +261,6 @@
   // Links directos con el mensaje ya escrito
   document.querySelectorAll('.js-wa').forEach(function (a) { a.href = wa(a.getAttribute('data-msg')); });
 
-  // Botón flotante cuando los de arriba salen de pantalla
-  var flota = document.getElementById('flota'), arriba = document.getElementById('arriba');
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (en) { flota.classList.toggle('on', !en[0].isIntersecting); }).observe(arriba);
-  }
 })();
 </script>
 </body>
